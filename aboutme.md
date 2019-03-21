@@ -4,7 +4,9 @@ title: About me
 subtitle: I'm just nerdin' around
 ---
 
-![Me](https://avatars0.githubusercontent.com/u/1323628?s=460&v=4)
+<p style="display:block;text-align:center">
+  <img src="https://avatars0.githubusercontent.com/u/1323628?s=460&v=4" alt="Me"/>
+</p>
 
 Hi, I’m Daniel Bergquist.
 

@@ -212,6 +212,6 @@ One final note about protocol extensions: You don't have to use the default impl
 
 ## Conclusion
 
-Hopefully, you can see the benefit of using structs and enums to avoid shared mutable state, how enums can be used to leverage the compiler to guarantee the existence of one value *or* another and how protocols combined with extensions can be used to reduce code between similar types. For more information, see the [Protocol-Oriented Programming in Swift][https://developer.apple.com/videos/play/wwdc2015/408/] session from WWDC 2015 and [Protocol and Value Oriented Programming in UIKit Apps](https://developer.apple.com/videos/play/wwdc2016/419/). Let your inner Crusty out.
+Hopefully, you can see the benefit of using structs and enums to avoid shared mutable state, how enums can be used to leverage the compiler to guarantee the existence of one value *or* another and how protocols combined with extensions can be used to reduce code between similar types. For more information, see the [Protocol-Oriented Programming in Swift][https://developer.apple.com/videos/play/wwdc2015/408/] session from WWDC 2015 and [Protocol and Value Oriented Programming in UIKit Apps](https://developer.apple.com/videos/play/wwdc2016/419/). These sessions are essential for using Swift to the fullest. Let your inner Crusty out.
 
 Be sure to subscribe to my [feed](https://bergquester.github.io/feed.xml) for the next installment of this series.

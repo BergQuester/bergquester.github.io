@@ -10,9 +10,9 @@ Swift provides many features that make it far more powerful than Objective-C. Th
 ## Use structs for most of your application state
 When using most application frameworks that are rooted in Objective-C or Java, it’s easy to get used to doing everything with classes and objects. The problem is that the use of objects means a shared mutable state can easily worm its way into your code.
 
-The problem here is a shared mutable state means your code will have hidden side-effects that are not apparent from the context in which you are currently coding. If these side effects are unknown to the programmer, or even unintended, this will lead to bugs in your code.
+The problem here is a shared mutable state means your code will have [hidden side-effects](https://manishearth.github.io/blog/2015/05/17/the-problem-with-shared-mutability/) that are not apparent from the context in which you are currently coding. If these side effects are unknown to the programmer, or even unintended, this will lead to bugs in your code.
 
-In Swift, the answer to avoiding a shared mutable state is to use structs for your state. Structs are value types meaning that setting a struct copies the value rather than a pointer. This behavior may sound slow, but the Swift runtime uses copy-on-write for the built-in types, such as strings and collections, to optimize structs. We can’t get away from using objects entirely; we will still need our UILabels, UIButtons, etc. However, for our application state, we can use structs to avoid shared mutable state.
+In Swift, the answer to avoiding a shared mutable state is to use structs for your state. Structs are value types meaning that setting a struct copies the value rather than a pointer. This behavior may sound slow, but the Swift runtime uses [copy-on-write](https://medium.com/@lucianoalmeida1/understanding-swift-copy-on-write-mechanisms-52ac31d68f2f) for the built-in struct types, such as strings and collections, to optimize structs. You can also implement copy-on-write for your own structs We can’t get away from using objects entirely; we will still need our UILabels, UIButtons, etc. However, for our application state, we can use structs to avoid shared mutable state.
 
 If you’re coming from Objective-C, you probably think that structs are more challenging to work with since they don’t have member methods. Structs in Swift, however, can have member methods, allowing you to use them with an object like syntax:
 
@@ -22,13 +22,15 @@ struct Computer {
   var price: Int
   var cpuSpeedInMHZ: Int 
 
-  func catalogeDescription() -> String {
-    let dollars = price / 100
-    let cents = price - dollars
-    return self.name + “ $“ + dollars + "." + cents
+  func catalogDescription() -> String {
+      let dollars = price / 100
+      let cents = price - (dollars * 100)
+      return self.name + " $\(dollars).\(cents)"
   }
 }
 ```
+There is one major caveat to getting the benefits of value types for avoiding shred mutable state: your structs must be pure value types. This requirement means there _cannot be any reference types_, objects for example, in your structure.
+
 
 ## Use enums when you have one kind of value or another kind of value, but not both
 
@@ -57,9 +59,9 @@ enum Result {
 
 func handle(result: Result) {
   switch result {
-    case .result(let result)
+    case .result(let result):
       // handle result here
-    case .error(let error)
+    case .error(let error):
       // handle error here
   }
 }
@@ -72,24 +74,24 @@ Ok, that’s great and all, but what about sharing code across types? Without in
 
 ```swift
 protocol Product {
-  var name: String
-  var price: Int
-  func catalogeDescription() -> String
+  var name: String { get set }
+  var price: Int { get set }
+  func catalogDescription() -> String
 }
 ```
 
-Here we have created a protocol the requires a first and last name property and a full name method. Any class, struct or enum that adheres to this protocol must implement this interface. Here is our computer struct from before, now conforming to our `Product` protocol:
+Here we have created a protocol the requires a first and last name property, both with getters and setters, and a full name method. Any class, struct or enum that adheres to this protocol must implement this interface. Here is our computer struct from before, now conforming to our `Product` protocol:
 
 ```swift
-struct Computer, Product  {
+struct Computer: Product  {
   var name: String
   var price: Int
   var cpuSpeedInMHZ: Int 
 
-  func catalogeDescription() -> String {
-    let dollars = self.price / 100
-    let cents = self.price - dollars
-    return self.name + “ $“ + dollars + "." + cents
+  func catalogDescription() -> String {
+      let dollars = price / 100
+      let cents = price - (dollars * 100)
+      return self.name + " $\(dollars).\(cents)"
   }
 }
 ```
@@ -97,12 +99,12 @@ struct Computer, Product  {
 Well, that’s not very impressive, all that we have done is say that `Computer` implements stuff that it already implements. That's more useful than it sounds. Let's say that we have a view controller for displaying product information:
 
 ```swift
-class ProductViewController, UIViewController {
+class ProductViewController: UIViewController {
   var productTitleLabel: UILabel!
 
   var product: Computer { 
     didSet {
-      self.productTitleLabel.text = self.product.catalogeDescription()
+      self.productTitleLabel.text = self.product.catalogDescription()
     }
   }
 }
@@ -111,12 +113,12 @@ class ProductViewController, UIViewController {
 Here `product` *must* be a `Computer` struct. However, what if we want to sell other products? This view controller is too tied to `Computer`. Instead, we can tell Swift that `product` is anything that conforms to the `Product` protocol:
 
 ```swift
-class ProductViewController, UIViewController {
+class ProductViewController: UIViewController {
   var productTitleLabel: UILabel!
 
   var product: Product { 
     didSet {
-      self.productTitleLabel.text = self.product.catalogeDescription()
+      self.productTitleLabel.text = self.product.catalogDescription()
     }
   }
 }
@@ -125,27 +127,27 @@ class ProductViewController, UIViewController {
 Now the `product` property can be just about anything. Say even a mock object for testing. However, that's a different topic. For now, let's create another product:
 
 ```swift
-struct Game, Product  {
+struct Game: Product  {
   var name: String
   var price: Int
   var genre: Genre 
 
-  func catalogeDescription() -> String {
-    let dollars = self.price / 100
-    let cents = self.price - dollars
-    return self.name + “ $“ + dollars + "." + cents
+  func catalogDescription() -> String {
+      let dollars = price / 100
+      let cents = price - (dollars * 100)
+      return self.name + " $\(dollars).\(cents)"
   }
 }
 ```
 
-Even though our `ProductViewController` doesn't know anything about `Game`, but because `Game` conforms to the `Product` protocol it will happily accept it. However, now we have a new problem, the `catalogeDescription()` method is duplicated between `Computer` and `Game`. This duplication problem is where protocol extensions come in. You may already be aware of extensions to classes, but you can extend protocols too. Let's see how this can help:
+Even though our `ProductViewController` doesn't know anything about `Game`, but because `Game` conforms to the `Product` protocol it will happily accept it. However, now we have a new problem, the `catalogDescription()` method is duplicated between `Computer` and `Game`. This duplication problem is where protocol extensions come in. You may already be aware of extensions to classes, but you can extend protocols too. Let's see how this can help:
 
 ```swift
 extension Product {
-    func catalogeDescription() -> String {
-    let dollars = self.price / 100
-    let cents = self.price - dollars
-    return self.name + “ $“ + dollars + "." + cents
+  func catalogDescription() -> String {
+      let dollars = price / 100
+      let cents = price - (dollars * 100)
+      return self.name + " $\(dollars).\(cents)"
   }
 }
 ```
@@ -153,13 +155,13 @@ extension Product {
 Here we declare an extension to `Product` that implements the same code that we had in our structs. Because the `Product` protocol requires the implementation of the `name` and `price` properties, this extension will automatically work for anything that implements the protocol. With this shared code, we can remove the method from our structures:
 
 ```swift
-struct Computer, Product  {
+struct Computer: Product  {
   var name: String
   var price: Int
   var cpuSpeedInMHZ: Int 
 }
 
-struct Game, Product  {
+struct Game: Product  {
   var name: String
   var price: Int
   var genre: Genre 
@@ -170,37 +172,37 @@ Finally, our example in its entirety looks like this:
 
 ```swift
 protocol Product {
-  var name: String
-  var price: Int
-  func catalogeDescription() -> String
+  var name: String { get set }
+  var price: Int { get set }
+  func catalogDescription() -> String
 }
 
 extension Product {
-    func catalogeDescription() -> String {
-    let dollars = self.price / 100
-    let cents = self.price - dollars
-    return self.name + “ $“ + dollars + "." + cents
+  func catalogDescription() -> String {
+      let dollars = price / 100
+      let cents = price - (dollars * 100)
+      return self.name + " $\(dollars).\(cents)"
   }
 }
 
-struct Computer, Product  {
+struct Computer: Product  {
   var name: String
   var price: Int
   var cpuSpeedInMHZ: Int 
 }
 
-struct Game, Product  {
+struct Game: Product  {
   var name: String
   var price: Int
   var genre: Genre 
 }
 
-class ProductViewController, UIViewController {
+class ProductViewController: UIViewController {
   var productTitleLabel: UILabel!
 
   var product: Product { 
     didSet {
-      self.productTitleLabel.text = self.product.catalogeDescription()
+      self.productTitleLabel.text = self.product.catalogDescription()
     }
   }
 }
@@ -210,6 +212,6 @@ One final note about protocol extensions: You don't have to use the default impl
 
 ## Conclusion
 
-Hopefully, you can see the benefit of using structs and enums to avoid shared mutable state, how enums can be used to leverage the compiler to guarantee the existence of one value *or* another and how protocols combined with extensions can be used to reduce code between similar types.
+Hopefully, you can see the benefit of using structs and enums to avoid shared mutable state, how enums can be used to leverage the compiler to guarantee the existence of one value *or* another and how protocols combined with extensions can be used to reduce code between similar types. For more information, see the [Protocol-Oriented Programming in Swift][https://developer.apple.com/videos/play/wwdc2015/408/] session from WWDC 2015 and [Protocol and Value Oriented Programming in UIKit Apps](https://developer.apple.com/videos/play/wwdc2016/419/). Let your inner Crusty out.
 
 Be sure to subscribe to my [feed](https://bergquester.github.io/feed.xml) for the next installment of this series.

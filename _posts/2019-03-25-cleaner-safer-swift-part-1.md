@@ -5,6 +5,10 @@ subtitle: Structs, Enums and Protocols
 tags: [swift, structs, enums, protocols, code-quality]
 ---
 
+<p style="display:block;text-align:center">
+  <img src="../img/swiftlogosmall.png" alt="Swift logo"/>
+</p>
+
 Swift provides many features that make it far more powerful than Objective-C. The Swift community has also developed many tools and best practices as well. Nothing here is new or groundbreaking, yet as part of working with different Swift codebases, I still see programmers ignoring these best practices regularly. In this series, I will discuss a few such features, tools, and techniques for writing cleaner, better code starting with structures, enums, protocols, and extensions.
 
 ## Use structs for most of your application state

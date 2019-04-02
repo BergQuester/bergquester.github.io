@@ -11,7 +11,7 @@ These questions were recently posed to me by a software development manager at a
 
 Here I will discuss some topics that need to be considered and possible solutions. I come from the perspective of a remote tech worker who works on the building of projects, and so I have limited insight on the business end. Therefore, I have reached out to some people I have worked with over the years to get their perspective.
 
-# Communication
+# Open Up Communication Communication Channels
 
 The biggest thing is probably making sure your communication channels are wide open. Healthy communication is essential for any company, but that importance is heightened for people in a remote setting.
 
@@ -29,7 +29,7 @@ A few tips on communication that I have observed worked well:
 
 * **Use video, not voice, chat** - Voice is great; however, video chat is better. Video chat allows people to get to know each other's expressions and better read people's thoughts via non-verbal communication. It's been said that non-verbal communication makes up more than half of communication, so it is vital that you do not cut that portion out. Keep in mind that sometimes voice is the only option for a participant. [Slack](https://slack.com) is fine for quick 1-on-1 meetings. For other meetings, I have found that [Zoom](http://zoom.us) is by far the most reliable service.
 
-* **Provide proper audio equipment** - Speaking of voice, make sure that people have both a good microphone and headphones. Preferably with noise cancelation. A good microphone helps people's voice come through clearly and headphones cut the annoying echo that plagues many chat sessions. Make judicious use of the mute button to help cut unneeded noise when you are not talking. Mic and headphones are changing all the time, so do your research and experiment with what sounds the best.
+* **Provide proper audio equipment** - Speaking of voice, make sure that people have both a good microphone and headphones. A good microphone helps people's voice come through clearly and headphones cut the annoying echo that plagues many chat sessions. Preferably, audio equipment will use noise cancelation and avoid BlueTooth. Make judicious use of the mute button to help cut unneeded noise when you are not talking. Mic and headphones are changing all the time, so do your research and experiment with what sounds the best.
 
 * **Set expectations on remote working space** - Whether an employee works from home, a coffee shop, a coworking space, or in the office, the area they use needs to be appropriate. Such a space is reasonably quiet, with no echo, and visually pleasing to your employee and on camera. Avoid backlighting as cameras struggle with it and will show the person in shadow!
 
@@ -44,6 +44,14 @@ A few tips on communication that I have observed worked well:
 * **Keep communication with individual employes open** - Hold regular manager-employee 1-on-1s to support the growth of that relationship, allow for two-way feedback, and help managers notice issues like fatigue or stress.
 
 * **Host company retreats** - Do this at least once, if not twice a year. I've seen these handled in different ways. I think it best if there's at least a day or two to work together face-to-face followed by a couple of days of holding your own little conference, activities, etc. I think it is best to use these to break the daily grind, build camaraderie and energize employees about the company and its projects. They do not have to be in your office too. Some companies fly their entire company to fantastic vacation locales.
+
+# Establish and Keep Trust
+
+In all businesses there needs to be trust between employees and company leadership. After all, if you don't trust each other, why are you working together? In a remote setting, this need for trust is intensified. Establishing open communication as above will go a long way towards building trust. However, this doesn't cover everything.
+
+# Adopt an Agreed Upon Plan
+
+Your company and its employees need to agree on how your distributed team should work. Once you agree on your remote working process, document it and make it available. Your plan shouldn't be overly rigid but needs to be enough to keep your team from falling into chaos. Just as important as having a plan is an adaptability. Be ready to adapt as your company grows, takes on new kinds of projects, hires different types of people and so on. When making changes, listen to the needs and pain points of everyone involved, don't just issue edicts from on high.
 
 # Other Considerations
 
@@ -64,3 +72,7 @@ I have not been a part of a company that has added remote working in while I was
 # Additional Resources
 
 Check out [Remote: Office Not Required](https://basecamp.com/books/remote) by a couple of 37signals (now Basecamp) guys. The company is a pioneer in the field of remote working.
+
+# Special Thanks
+
+Thank you to [Ron Meyer](https://www.linkedin.com/in/ron-meyer-1301a5/), [Paul Sim](https://www.linkedin.com/in/paul-sim-403051a9/), and [Will Jones](https://www.linkedin.com/in/wtjones/) for both their feedback and their ideas on this topic.

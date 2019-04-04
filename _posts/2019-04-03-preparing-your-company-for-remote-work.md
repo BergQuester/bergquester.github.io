@@ -77,4 +77,4 @@ Check out [Remote: Office Not Required](https://basecamp.com/books/remote) by a 
 
 # Special Thanks
 
-Thank you to [Ron Meyer](https://www.linkedin.com/in/ron-meyer-1301a5/), [Paul Sim](https://www.linkedin.com/in/paul-sim-403051a9/), and [Will Jones](https://www.linkedin.com/in/wtjones/) for both their feedback and their ideas on this topic.
+Thank you to [Ron Meyer](https://www.linkedin.com/in/ron-meyer-1301a5/), [Paul Sim](https://www.linkedin.com/in/paul-sim-403051a9/), and [Will Jones](https://www.linkedin.com/in/wtjones/) for their feedback and their ideas on this topic.

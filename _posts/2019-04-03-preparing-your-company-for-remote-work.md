@@ -49,6 +49,8 @@ A few tips on communication that I have observed worked well:
 
 In all businesses there needs to be trust between employees and company leadership. After all, if you don't trust each other, why are you working together? In a remote setting, this need for trust is intensified. Establishing open communication as above will go a long way towards building trust. However, this doesn't cover everything.
 
+At the time of publication, this is an area that I am still learning more about from different perspectives. I'll update this article with what I have leared in the future.
+
 # Adopt an Agreed Upon Plan
 
 Your company and its employees need to agree on how your distributed team should work. Once you agree on your remote working process, document it and make it available. Your plan shouldn't be overly rigid but needs to be enough to keep your team from falling into chaos. Just as important as having a plan is an adaptability. Be ready to adapt as your company grows, takes on new kinds of projects, hires different types of people and so on. When making changes, listen to the needs and pain points of everyone involved, don't just issue edicts from on high.

@@ -3,6 +3,7 @@ layout: post
 title: Cleaner, Safer Swift Code Part 1
 subtitle: Structs, Enums and Protocols 
 tags: [swift, structs, enums, protocols, code-quality]
+share-img: "/img/swiftlogosmall.png"
 ---
 
 <p style="display:block;text-align:center">

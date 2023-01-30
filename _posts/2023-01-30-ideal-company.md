@@ -7,7 +7,7 @@ tags: [values, culture]
 
 # Ideal Co. Opportunity
 
-As software engineers, we view many job listings for many companies. I thought writing a fictitious job listing for my ideal company would be an excellent exercise. Just as job listings describe the perfect candidate that doesn't exist, this listing describes the ideal company with the perfect opening.
+As software engineers, we view many job listings for many companies. Writing a fictitious job listing for my ideal company would be an excellent exercise. Just as job listings describe the perfect candidate that doesn't exist, this listing describes the ideal company with the perfect opening.
 
 ## Who We Are
 
@@ -17,13 +17,13 @@ We are in almost any industry that improves people's day-to-day lives or society
 
 ## Company Culture
 
-We understand that our employees come from many walks of life. We take pride in delivering a high-quality product and genuinely taking care of our employees. We don't believe in letting burnout happen, and we know that life happens, even in meetings! We take a long term in mind with investing in our product and our people.
+We understand that our employees come from many walks of life. We take pride in delivering a high-quality product and genuinely taking care of our employees. We don't believe in letting burnout happen, and we know that life happens, even in meetings! We take the long term in mind by investing in our product and our people. We do not chase unsustainable growth. Taken together, this means we hire direct and conservatively. When hard times come, we take measures to avoid layoffs.
 
 ### Remote First, Async First
 
 We believe in getting the best people for the job wherever they are, no matter the timezone. We also believe that with the right tools and techniques, creative people can work just as close, if not closer, remotely as they do in person. Meetings are usually a sign that something has gone wrong and that teams can handle most matters asynchronously.
 
-We also gather the entire company once or twice a year and occasionally bring teams together for some intensive collaboration.
+We also gather the entire company once or twice a year and occasionally bring teams together for intensive collaboration.
 
 ### Professional Development
 
@@ -71,7 +71,7 @@ Since we work remotely, we offer a $250/mo office stipend to help pay for office
 
 #### PTO
 
-It's important to step away and refresh. Most people don't take the time to take care of themselves. Here at Ideal Co., employees are required to take a *minimum* of 10 days PTO. There is also unlimited sick time to take care of your self or a family member.
+It's important to step away and refresh. Most people don't take the time to take care of themselves. Here at Ideal Co., employees are required to take a *minimum* of 10 days PTO. There is also unlimited sick time to take care of yourself or a family member.
 
 #### 401k
 
@@ -79,7 +79,7 @@ We match up to 4% of your salary into your 401k.
 
 #### Insurance
 
-Health, and dental for the employee included. Options to add members of your family are available.
+Health and dental for the employee included. Options to add members of your family are available.
 
 ## The Role
 

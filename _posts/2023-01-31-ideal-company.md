@@ -7,7 +7,9 @@ tags: [values, culture]
 
 # Ideal Co. Opportunity
 
-As software engineers, we view many job listings for many companies. I have thought for a long while that writing a fictitious job listing for my ideal company would be an excellent exercise. Just as job listings describe the perfect candidate that doesn't exist, this listing describes the ideal company with the perfect opening.
+As software engineers, we view many job listings for many companies. This is something I have thought about writing for several years. Writing a fictitious job listing for my ideal company would be an excellent exercise to give clarity to myself and as something I can point potential recruiters to. Just as job listings describe the perfect candidate that doesn't exist, this listing describes the ideal company with the perfect opening.
+
+Like life, the contents of this is subject to change as needs and desires grow.
 
 If the values expressed here jive pretty closely with your company's and you find [my expirence](https://www.linkedin.com/in/daniel-bergquist-41390b16/) interesting, feel free to reach out.
 

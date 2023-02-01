@@ -15,8 +15,6 @@ If the values expressed here jive pretty closely with your company's and you fin
 
 ## Who We Are
 
-## What we do
-
 We are in an industry that improves people's day-to-day lives or society. Our industry could even be something that most venture capitalists do not find attractive because it is too mundane. However, we are *not* in the data collection, Web 3, crypto, or toxic social media industries.
 
 ## Company Culture

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ideal, Co. Oppurtunity
-subtitle: A Fictional Job Opening For My Ideal Company
+subtitle: A Fictional Job Opening From My Ideal Company
 tags: [values, culture]
 ---
 

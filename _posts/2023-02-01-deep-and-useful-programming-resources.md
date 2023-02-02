@@ -22,9 +22,9 @@ This book is very dense, and it will take a while to understand the contents ful
 ## Category Theory for Programmers
 ### By Bartosz Milewski
 
-Category theory examines the underlying structure of mathematics and logic through "objects" and "arrows" (also called "morphisms")\]. For programmers, category theory can serve as a roadmap to new ways to manipulate code and how different data structures and functions relate. This book answers what things like a "monad" or a "functor" are and why they are essential concepts. Code examples are in Haskell (more on that below) and, much more verbosely, C++.
+Category theory examines the underlying structure of mathematics and logic through "objects" and "arrows" (also called "morphisms"). For programmers, category theory can serve as a roadmap to new ways to manipulate code and how different data structures and functions relate. This book answers what things like a "monad" or a "functor" are and why they are essential concepts. Code examples are in Haskell (more on that below) and, much more verbosely, C++.
 
-Like SICP, this book has a series of free lectures on YouTube, and Milewski is an excellent teacher while demystifying this obscure branch of mathematics.
+Like SICP, this book has a series of free lectures on YouTube, and Milewski is an excellent teacher while demystifying this obscure branch of mathematics. This book was also released under the Creative Commons.
 
 \[[Print](https://www.blurb.com/b/9621951-category-theory-for-programmers-new-edition-hardco)\] \[[Web](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/)\] \[[PDF](https://github.com/hmemcpy/milewski-ctfp-pdf)\] \[[Video Lectures Part 1](https://www.youtube.com/watch?v=I8LbkfSSR58&list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_)\] \[[Video Lectures Part 2](https://www.youtube.com/watch?v=3XTQSx1A3x8&list=PLbgaMIhjbmElia1eCEZNvsVscFef9m0dm)\] \[[Video Lectures Part 3](https://www.youtube.com/watch?v=F5uEpKwHqdk&list=PLbgaMIhjbmEn64WVX4B08B4h2rOtueWIL)\]
 

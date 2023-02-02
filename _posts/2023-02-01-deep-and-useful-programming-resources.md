@@ -7,7 +7,7 @@ tags: [learning, programming, functional programming, theory, applications]
 
 Many programmers read books about new platforms or languages. Perhaps even a book about applying a particular pattern in their favorite language. I like to go deeper and try to understand the fundamental structure that serves as the underpinnings of all programming, that is, the code behind the code, if you will. I have encountered a few books and resources over the last few years that have helped me understand what this thing we call "computation" is really about.
 
-These books and resources go deep; every page has something weighty to chew on. The concepts they cover may seem intimidating, but they are actually quite simple. You need to stick with them and get to the point where there is a shift in your thinking. While I have not (yet)\] finished any of these, what I have read has already proved fruitful.
+These books and resources go deep; every page has something weighty to chew on. The concepts they cover may seem intimidating, but they are actually quite simple. You need to stick with them and get to the point where there is a shift in your thinking. While I have not (yet) finished any of these, what I have read has already proved fruitful.
 
 ## The Structure and Interpretation of Computer Programs
 ### By Harold Abelson, Gerald Jay Sussman, and Julie Sussman

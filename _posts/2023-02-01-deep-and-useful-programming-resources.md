@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deep and Useful Programming Resources
-subtitle: A Fictional Job Opening From My Ideal Company
+subtitle: Going Beyond the Typical Learning
 tags: [learning, programming, functional programming, theory, applications]
 ---
 

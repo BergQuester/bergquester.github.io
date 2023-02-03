@@ -18,7 +18,6 @@ This book is very dense, and it will take a while to understand the contents ful
 
 \[[Print](https://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871)\] \[[Web](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)\] \[[HTML5/epub](https://sicpebook.wordpress.com)\] \[[PDF](https://github.com/sarabander/sicp-pdf)\] \[[Video Lectures](https://www.youtube.com/watch?v=-J_xL4IGhJA&list=PLE18841CABEA24090)\]
 
-
 ## Category Theory for Programmers
 ### By Bartosz Milewski
 
@@ -38,6 +37,19 @@ The Haskell community has actively mined the depths of category theory, making i
 The book I have selected here is the famous "Learn You a Haskell for Great Good!" The book is easy to read and has been a joy.
 
 \[[Print](https://nostarch.com/lyah.htm)\] \[[Web](http://learnyouahaskell.com/chapters)\] \[[PDF](http://learnyouahaskell.com/learnyouahaskell.pdf)\]
+
+## Grokking Simplicity: Taming complex software with functional thinking
+### By Eric Normand
+
+This book takes a more immediately applicative turn than the previous ones. I initially didn't include this book in this listing as I personally didn't find it particularly challenging as it primarily reflected my current thinking.
+
+However, Grokking Simplicity keeps coming up as a book that has been influential to others. I can see it as a gentle way to dip your toes into the functional waters, so I'm adding it here as you may find it fruitful.
+
+This book focuses more on writing and refactoring code based on business requirements and largely avoids most concepts from Category Theory and function composition. Instead, Grokking Simplicity focuses on the crucial distinction between "calculations" and "actions" (i.e., pure functions and functions with side-effects), separating your functions into layers with stratified design, first-class functions, and handling asynchronous tasks.
+
+The book uses JavaScript in the examples and shows you how to visualize code, timelines, dependencies, etc., by drawing various charts.
+
+\[[Print/Web/eBook](https://www.manning.com/books/grokking-simplicity?a_bid=72596968&a_aid=lispcast)\]
 
 ## PointFreeCo
 ### By Brandon Williams and Stephen Celis

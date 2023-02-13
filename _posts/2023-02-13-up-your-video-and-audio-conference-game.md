@@ -13,9 +13,11 @@ I use a pair of over-the-ear headphones, particularly [AirPods Max](https://www.
 
 # Microphone
 
-I find that using the mic feature of BlueTooth headphones dramatically cuts into the audio quality going both ways. By using a separate, high-quality mic, this issue can be bypassed. The call software may complain that you are using a different audio device for input and output and may cause feedback issues, but using headphones or earbuds eliminates this issue.
+I find that using the mic feature of Bluetooth headphones dramatically cuts into the audio quality going both ways. By using a separate, high-quality mic, this issue can be bypassed. The call software may complain that you are using a different audio device for input and output and may cause feedback issues, but using headphones or earbuds eliminates this issue.
 
 Get a good mic, like what [Blue](https://www.bluemic.com/en-us/) offers. I don't know how often I have been on calls with people with poor mics who don't pick up their voices well or drop out entirely. A good mic can make you sound like you are in the same room. You don't have to go for recording studio mics, but certainly something above average. I use a Blue Yeti mic.
+
+Travel tip: It may not be feasable to travel with a wired mic. Try using your latop's mic instead. Test the audio quality by recording an audio snippet locally to make sure it sounds good. You may find your Bluetooh audio device has better quality. It's a tradeoff.
 
 # Camera
 

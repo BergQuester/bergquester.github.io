@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gotchas When Refactoring Really Legacy Code to Structured Concurrency
-subtitle: Hardware and software recommendations for video and audio
+subtitle: Non-Obvious Pitfalls
 tags: [swift, structured-concurrency, legacy-code]
 ---
 Recently, I have been working on migrating some Swift ansynchronous code to Swit Structured Concurrency. I'm working in a large codebase that dates back to when Swift was just a twinkle in Chris Lattner's eye.

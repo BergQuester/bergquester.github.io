@@ -4,7 +4,7 @@ title: Gotchas When Refactoring Really Legacy Code to Structured Concurrency
 subtitle: Non-Obvious Pitfalls
 tags: [swift, structured-concurrency, legacy-code]
 ---
-Recently, I have been working on migrating some Swift ansynchronous code to Swit Structured Concurrency. I'm working in a large codebase that dates back to when Swift was just a twinkle in Chris Lattner's eye.
+Recently, I have been working on migrating some Swift ansynchronous code to Swift Structured Concurrency. I'm working in a large codebase that dates back to when Swift was just a twinkle in Chris Lattner's eye.
 
 With years of developers rolling on and off the project and much code written in Objective-C and pre-`Result` type, I have encountered a few gotchas. Here I will go through some of the special considerations a developer needs to consider when bringing Structured Concurrency into an older codebase.
 

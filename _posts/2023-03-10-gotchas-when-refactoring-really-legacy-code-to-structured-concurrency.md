@@ -6,15 +6,15 @@ tags: [swift, structured-concurrency, legacy-code]
 ---
 Recently, I have been working on migrating some Swift ansynchronous code to Swit Structured Concurrency. I'm working in a large codebase that dates back to when Swift was just a twinkle in Chris Lattner's eye.
 
-With years of developers rolling on and off the project and much code written in Objective-C and pre-`Result` type, I have encountered a few gotchas. Here I will go through some of the special considerations a developer needs to keep in mind when brining Structured Concurrency into an older codebase.
+With years of developers rolling on and off the project and much code written in Objective-C and pre-`Result` type, I have encountered a few gotchas. Here I will go through some of the special considerations a developer needs to consider when bringing Structured Concurrency into an older codebase.
 
 ## Callback Closure Contract Violations
 
-With completion handlers, there is a contract that is expected with how they are called: The callback closure will be called exactly once and will have either a value on success or an error value on failure. Swift Structured Concurrency enforces this contract, while legacy code may violate them. With violations, it is important to study the code to understand the intended semantics, if any, of the callback closure issues that you encounter.
+With completion handlers, there is a contract that is expected with how they are called: The callback closure will be called exactly once and will have either a value on success or an error value on failure. Swift Structured Concurrency enforces this contract, while legacy code may violate them. With violations, it is essential to study the code to understand the intended semantics, if any, of the callback closure issues you encounter.
 
-### Invalid Calback Values
+### Invalid Callback Values
 
-In legacy code you might find closures that predate the `Result` type and are instead of the form `(Success?, Error?)`. The issue here is that there is nothing enforcing one and only one value being populated. The following is a table showing the possible values in for this tuple and their validity with the standard callback contract:
+In legacy code, you might find closures that predate the `Result` type and are instead of the form `(Success?, Error?)`. The issue here is that nothing enforces one and only one value being populated. The following is a table showing the possible values for this tuple and their validity with the standard callback contract:
 
 | Success | Failure | Valid |
 |:-------:|:-------:|:-----:|
@@ -25,11 +25,11 @@ In legacy code you might find closures that predate the `Result` type and are in
 
 I have seen `(nil, nil)` passed in some scenarios, while I have not encountered both values being populated.
 
-In either case, updating the closures to a `Result` type is a good intermediate step before updating the function to be `async` with structured concurrency. When doing so, take care to examine the *symantics* of the invalid cases. You may need to introduce additional `Error` cases that are ignored up the call chain or make accomodations for parital `Success`.
+In either case, updating the closures to a `Result` type is a good intermediate step before updating the function to be `async` with structured concurrency. When doing so, take care to examine the *semantics* of the invalid cases. You may need to introduce additional `Error` cases that are ignored up the call chain or make accommodations for partial `Success`.
 
 ### One and Only One Callback Call
 
-When calling a callback closure function from an `async` method it is necessary to wrap the call in one of the several `withContinuation` variants. All variants expect that a `resume()` variant is called on the `Continuation` exactly once. `withCheckedContinuation` variants will enforce this at compile time while `withUnsafeContinuation` will still expect this contract to be fulfilled, but the compiler will not enforce it. The following table shows the validity of the number of calls:
+When calling a callback closure function from an `async` method, it is necessary to wrap the call in one of the several `withContinuation` variants. All variants expect a `resume()` variant to be called on the `Continuation` exactly once. `withCheckedContinuation` variants will enforce this at compile time while `withUnsafeContinuation` will still expect this contract to be fulfilled, but the compiler will not enforce it. The following table shows the validity of the number of calls:
 
 | Number of Calls | Valid |
 |:---------------:|:-----:|
@@ -37,14 +37,14 @@ When calling a callback closure function from an `async` method it is necessary 
 | 1               | Yes   |
 | 2 or more       | No    |
 
-With legacy callback closure code, there is no enforcement of this callback contract. Legacy methods may either call the callback more than once, or not at all. In the first case a workaround may be to use mechanisms to ensure that the `Continuation` is only called once.
+With the legacy callback closure code, there is no enforcement of this callback contract. Legacy methods may call the callback more than once or not at all. In the first case, a workaround may be to use mechanisms to ensure that the `Continuation` is only called once.
 
 In both cases, the broken function should ultimately be updated to conform to the callback contract. Again, pay attention to the semantics of the callback abuse and make additional adjustments in client code as needed.
 
 ## MainActor Issues
 
 ### Add @MainActor Annotations
-Some code may access views, view controllers, or other resources that are required to be on the main thread. Make sure to annotate any functions or `Tasks` that do such work with `@MainActor`. For example:
+Some code may access views, view controllers, or other resources required to be on the main thread. Make sure to annotate any functions or `Tasks` that do such work with `@MainActor`. For example:
 
 ```swift
 // A function that runs on the `MainActor`
@@ -107,4 +107,4 @@ If possible, try to refactor the view and resource access out of async code and 
 
 ## When to Refactor to Structured Concurrency?
 
-    Moving to structured concurrency can cause complicated and subtle issues if the callback issues above -- and wider architectural issues -- are not first addressed. Therefore, it is highly recommended that refactoring to structured concurrency be a later refactor after the larger issues have been addressed.
+    Moving to structured concurrency can cause complicated and subtle issues if the callback issues above -- and broader architectural issues -- are not first addressed. Therefore, it is highly recommended that refactoring to structured concurrency be a later refactor after the more prominent issues have been addressed.

@@ -103,8 +103,6 @@ Objective-C doesn't have the concept of a `MainActor`. If you have work that nee
 
 If possible, try to refactor the view and resource access out of async code and into client code by communicating results up the call chain.
 
-## Documentation
-
 ## When to Refactor to Structured Concurrency?
 
-    Moving to structured concurrency can cause complicated and subtle issues if the callback issues above -- and broader architectural issues -- are not first addressed. Therefore, it is highly recommended that refactoring to structured concurrency be a later refactor after the more prominent issues have been addressed.
+Moving to structured concurrency can cause complicated and subtle issues if the callback issues above -- and broader architectural issues -- are not first addressed. Therefore, it is highly recommended that refactoring to structured concurrency be a later refactor after the more prominent issues have been addressed.

@@ -47,7 +47,7 @@ We also take the time to consider where new user and developer features can help
 
 ### Functional First
 
-We believe that functional languages, such as Elixir, Haskell, and Elm, and using functional approaches in languages like Swift or Kotlin is the best way to write expressive, testable, and maintainable code. Functional doesn't only mean throwing map, filter, reduce, or immutability into our toolkit of coding practices but going deeper with structure with ideas like function composition, monads, lenses, and functional app architecture such as Redux.
+We believe that functional languages, such as Elixir, Haskell, and Elm, and using functional approaches in languages like Swift or Kotlin is the best way to write expressive, testable, and maintainable code. Functional doesn't only mean throwing map, filter, reduce, or immutability into our toolkit of coding practices but going deeper with structure with ideas like function composition, monads, lenses, and functional app architecture such as TCA or Redux.
 
 We're pragmatic about this too; sometimes, a developer must write a use case an imperative style. Whenever possible, we push this code to the edges of our apps.
 

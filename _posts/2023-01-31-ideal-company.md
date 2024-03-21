@@ -13,7 +13,7 @@ If the values expressed here jive pretty closely with your company's and you fin
 
 ## Who We Are
 
-We are in an industry that improves people's day-to-day lives or society. Our industry could even be something that most venture capitalists do not find attractive because it is too mundane. However, we are *not* in the data collection, Web 3, crypto, or toxic social media industries.
+We are in an industry that improves people's day-to-day lives or society. Our industry could even be something that most venture capitalists do not find attractive because it is too mundane. We are not interested in being beholden to investors or shareholders, but in long-term financial stability. We are *not* in the data collection, Web 3, crypto, or toxic social media industries.
 
 ## Company Culture
 
@@ -21,7 +21,7 @@ We understand that our employees come from many walks of life. We take pride in 
 
 ### Remote First, Async First
 
-We believe in getting the best people for the job wherever they are, no matter the timezone. The best people need the best tools and techniques, and by using the best, creative people can work just as close, if not closer, remotely as they do in person. Most matters can be handled asynchronously; synchronous meetings are usually a sign that something has gone wrong.
+We believe in getting the best people for the job wherever they are, no matter the timezone. The best people need the best tools and techniques, and by using the best, creative people can work just as close, if not closer, remotely as they do in person. Most matters can be handled asynchronously; synchronous meetings are usually a sign that something has gone wrong. We do not bog our employees down with dozens of internal communication tools nor do we expect everyone to deal with busy work to make ourselves feel important.
 
 We also gather the entire company once or twice a year and occasionally bring teams together for intensive collaboration.
 

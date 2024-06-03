@@ -3,6 +3,7 @@ layout: post
 title: Ideal, Co. Opportunity
 subtitle: A Fictional Job Opening From My Ideal Company
 tags: [values, culture]
+published: false
 ---
 
 This little expirement is something I have thought about writing for several years. As software engineers, we view many job listings for many companies. Writing a fictitious job listing for my ideal company would be an excellent exercise to give clarity to myself and as something I can point potential recruiters to. Just as job listings describe the perfect candidate that doesn't exist, this listing describes the ideal company with the perfect opening, which probably doesn't exist. Every item on here is something I have seen real companies offer. A company that offers all of it would be a special and rare find indeed.
